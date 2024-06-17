@@ -1,0 +1,47 @@
+package com.practica.turismoapp.presentation
+
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
+import coil.load
+import com.practica.turismoapp.R
+import com.practica.turismoapp.data.Turismo
+
+interface TurismoClickedListener{
+    fun onTurismoClicked(turismo: Turismo)
+}
+
+class AdapterTurismo(private val listaTurismo: List<Turismo>,
+    private val cuandoAgoClickedListener: TurismoClickedListener,):
+    RecyclerView.Adapter<AdapterTurismo.MyViewHolder>() {
+
+    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): MyViewHolder {
+        val view = LayoutInflater.from(viewGroup.context)
+            .inflate(R.layout.item_layout, viewGroup, false)
+        return MyViewHolder(view)
+
+    }
+
+    override fun onBindViewHolder(viewHolder: MyViewHolder, position: Int) {
+        val turismo = listaTurismo[position]
+        viewHolder.bind(turismo)
+        viewHolder.itemView.setOnClickListener { cuandoAgoClickedListener.onTurismoClicked(turismo) }
+    }
+
+    override fun getItemCount(): Int = listaTurismo.size
+
+    inner class MyViewHolder(view: View): RecyclerView.ViewHolder(view){
+
+     //   private val tvServicios: TextView = view.findViewById(R.id.tvServicios)
+     //   private val ivTurismo: ImageView = view.findViewById(R.id.ivTurismo)
+
+
+        fun bind(Glamping: Turismo){
+       //     tvServicios.text = Glamping.servicios
+        //    ivTurismo.load(Glamping.imagen)
+        }
+    }
+}
