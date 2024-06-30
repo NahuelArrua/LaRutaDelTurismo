@@ -1,5 +1,6 @@
 package com.practica.turismoapp.presentation
 
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,12 +11,14 @@ import coil.load
 import com.practica.turismoapp.R
 import com.practica.turismoapp.data.Turismo
 
-interface TurismoClickedListener{
+interface TurismoClickedListener {
     fun onTurismoClicked(turismo: Turismo)
 }
 
-class AdapterTurismo(private val listaTurismo: List<Turismo>,
-    private val cuandoAgoClickedListener: TurismoClickedListener,):
+class AdapterTurismo(
+    private val listaTurismo: List<Turismo>,
+    private val cuandoAgoClickedListener: TurismoClickedListener,
+) :
     RecyclerView.Adapter<AdapterTurismo.MyViewHolder>() {
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): MyViewHolder {
@@ -33,15 +36,13 @@ class AdapterTurismo(private val listaTurismo: List<Turismo>,
 
     override fun getItemCount(): Int = listaTurismo.size
 
-    inner class MyViewHolder(view: View): RecyclerView.ViewHolder(view){
+    inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        private val tvProvincia: TextView = view.findViewById(R.id.tvProvincia)
+        private val ivProvincias: ImageView = view.findViewById(R.id.ivProvincias)
 
-     //   private val tvServicios: TextView = view.findViewById(R.id.tvServicios)
-     //   private val ivTurismo: ImageView = view.findViewById(R.id.ivTurismo)
-
-
-        fun bind(Glamping: Turismo){
-       //     tvServicios.text = Glamping.servicios
-        //    ivTurismo.load(Glamping.imagen)
+        fun bind(Glamping: Turismo) {
+            tvProvincia.text = Glamping.Provincia
+            ivProvincias.load(Glamping.Imagen)
         }
     }
 }

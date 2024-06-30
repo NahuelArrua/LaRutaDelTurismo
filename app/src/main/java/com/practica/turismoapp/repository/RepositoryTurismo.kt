@@ -1,5 +1,6 @@
 package com.practica.turismoapp.repository
 
+
 import com.practica.turismoapp.data.TurismoGlam
 import com.practica.turismoapp.network.APIService
 import com.practica.turismoapp.network.DataSource.Companion.retrofit
@@ -12,5 +13,11 @@ class RepositoryTurismo{
             val result = retrofit.create(APIService::class.java).getDatosTurismo()
             return result
         }
+   /*
+   suspend fun pegadaRepositoryDos(): Response<TurismoGlam>{
+            val result = retrofit.create(APIService::class.java).getDatosTurismo()
+            return result
+        }
     }
-}
+   */
+}  }

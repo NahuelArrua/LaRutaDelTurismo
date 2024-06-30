@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.TurismoApp" parent="Theme.Material3.Light.NoActionBar">
 
-        <item name="colorPrimary">@@color/md_theme_tertiaryFixedDim</item>
+        <item name="colorPrimary">#DCE7C8</item>
         <item name="colorOnPrimary">@color/md_theme_onPrimary</item>
         <item name="colorPrimaryContainer">@color/md_theme_primaryContainer</item>
         <item name="colorOnPrimaryContainer">@color/md_theme_onPrimaryContainer</item>
@@ -50,4 +50,13 @@
         <item name="colorSurfaceContainerHighest">@color/md_theme_surfaceContainerHighest</item>
     </style>
     <style name="Theme.TurismoApp" parent="Base.Theme.TurismoApp" />
+
+    <style name="Theme.ApiSplashScreen" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#0C1D34</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/texto</item>
+        <item name="windowSplashScreenAnimationDuration">300</item>
+        <item name="postSplashScreenTheme">@style/Base.Theme.TurismoApp</item>
+    </style>
+
+
 </resources>

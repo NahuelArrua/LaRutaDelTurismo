@@ -12,6 +12,7 @@ import com.practica.turismoapp.repository.RepositoryTurismo.Companion.pegadaRepo
 import kotlinx.coroutines.launch
 
 class SecondScreentActivity : AppCompatActivity() {
+
     private lateinit var binding: ActivitySecondScreenBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivitySecondScreenBinding.inflate(layoutInflater)
@@ -19,9 +20,24 @@ class SecondScreentActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
+        //  val searchView = findViewById<SearchView>(R.id.SearchView)
         binding.reciclerView.setHasFixedSize(true)
         binding.reciclerView.layoutManager = GridLayoutManager(this, 1)
         //  binding.reciclerView.layoutManager = LinearLayoutManager(this)
+
+        /*
+        binding.SearchView.setOnQueryTextListener(object : OnQueryTextListener {
+                override fun onQueryTextSubmit(text: String?): Boolean {
+                    return false
+                }
+
+                override fun onQueryTextChange(newText: String?): Boolean {
+
+                    return true
+                }
+            })
+         */
+
         listadoTurismo()
     }
 
@@ -33,8 +49,9 @@ class SecondScreentActivity : AppCompatActivity() {
                 binding.reciclerView.adapter = listTurismo?.let {
                     AdapterTurismo(it, object : TurismoClickedListener {
                         override fun onTurismoClicked(turismo: Turismo) {
-                            Constants.traspasoDeTurismo = turismo
-                            val intent = Intent(this@SecondScreentActivity, DescriptionActivity::class.java)
+                           Constants.traspasoDeTurismo = turismo
+                            val intent =
+                                Intent(this@SecondScreentActivity, LugaresActivity::class.java)
                             startActivity(intent)
                         }
                     }

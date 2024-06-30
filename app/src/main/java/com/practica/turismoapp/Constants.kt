@@ -1,7 +1,7 @@
 package com.practica.turismoapp
 
 import com.practica.turismoapp.data.Turismo
-import com.practica.turismoapp.data.TurismoGlam
+
 
 /*
 Las const y las val son prácticamente lo mismo: valores que no se pueden cambiar.
@@ -22,7 +22,7 @@ Los objetos complementarios en Kotlin son objetos que están vinculados a una cl
 
 object Constants {
 
-    const val URL_BASE = " https://demo3071965.mockable.io/"
+    var URL_BASE:String = "http://149.50.140.123/"
 
     var traspasoDeTurismo: Turismo? = null
 

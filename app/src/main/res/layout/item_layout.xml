@@ -1,45 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<com.google.android.material.card.MaterialCardView
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.Material3.CardView.Outlined"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="80dp"
-    android:backgroundTint="@color/md_theme_secondaryFixedDim_mediumContrast"
-    android:padding="10dp"
+    android:layout_height="138dp"
+    android:layout_marginBottom="30dp"
     android:checkable="true"
     android:clickable="true"
-    android:focusable="true"
-    style="@style/Widget.Material3.CardView.Filled">
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/ivProvincias"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="@color/indigo900" />
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_height="140dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/tvServicios"
+            android:id="@+id/tvProvincia"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_height="match_parent"
             android:gravity="center"
-            android:text="servicios"
-            android:textColor="@color/black"
-            android:textSize="30dp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/ivTurismo"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"/>
+            android:text="Corrientes"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
 
     </LinearLayout>
 
-</com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

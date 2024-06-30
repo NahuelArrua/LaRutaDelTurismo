@@ -40,7 +40,7 @@ class DataSource {
             .Builder()
             .baseUrl(URL_BASE)
             .addConverterFactory(GsonConverterFactory.create())
-            .client(getUnsafeOkHttpClient())
+            .client(client)
             .build()
 
         private fun getUnsafeOkHttpClient(): OkHttpClient? {
