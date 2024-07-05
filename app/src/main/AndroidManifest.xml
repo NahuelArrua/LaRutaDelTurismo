@@ -16,9 +16,9 @@
         android:theme="@style/Theme.TurismoApp"
         tools:targetApi="31">
         <activity
-            android:name=".presentation.HomeActivity"
-            android:exported="true"
-            android:theme="@style/Theme.ApiSplashScreen">
+            android:name=".presentation.home.SecondScreentActivity"
+            android:exported="true">
+<!--            android:theme="@style/Theme.ApiSplashScreen">-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,9 +37,9 @@
         <activity
             android:name=".presentation.LugaresActivity"
             android:exported="false" />
-        <activity
-            android:name=".presentation.SecondScreentActivity"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".presentation.SecondScreentActivity"-->
+<!--            android:exported="false" />-->
     </application>
 
 </manifest>

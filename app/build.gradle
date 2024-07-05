@@ -67,6 +67,9 @@ dependencies {
     implementation 'com.github.MikeOrtiz:TouchImageView:1.4.1'
 
     implementation libs.androidx.core.ktx
+    implementation libs.androidx.livedata
+    implementation libs.androidx.livedata.viewmodel
+    implementation libs.androidx.livedata.runtime
     implementation libs.androidx.appcompat
     implementation libs.material
     implementation libs.androidx.activity

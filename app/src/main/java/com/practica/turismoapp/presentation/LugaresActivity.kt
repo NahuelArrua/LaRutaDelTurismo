@@ -18,7 +18,6 @@ class LugaresActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-
         binding.tvProvincia.setOnClickListener {
             intent = Intent(this, DescripcionActivity::class.java)
             startActivity(intent)
