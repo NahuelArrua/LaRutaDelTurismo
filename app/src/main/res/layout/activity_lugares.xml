@@ -73,18 +73,21 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/imagen1"
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
                     android:layout_marginTop="300dp"
                     android:src="@drawable/pescadolaposta" />
 
                 <ImageView
+                    android:id="@+id/imagen2"
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
                     android:layout_marginTop="00dp"
                     android:src="@drawable/pescadolaposta" />
 
                 <ImageView
+                    android:id="@+id/imagen3"
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
                     android:layout_marginTop="00dp"

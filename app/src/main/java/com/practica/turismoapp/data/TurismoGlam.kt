@@ -1,6 +1,6 @@
 package com.practica.turismoapp.data
 
-class TurismoGlam (
+data class TurismoGlam (
     var Glamping: List<Turismo>
 )
 
