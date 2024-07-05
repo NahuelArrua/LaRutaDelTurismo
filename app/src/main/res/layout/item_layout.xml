@@ -35,7 +35,6 @@
             android:text="Corrientes"
             android:textColor="@color/white"
             android:textSize="30sp" />
-
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

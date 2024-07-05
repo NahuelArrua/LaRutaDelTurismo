@@ -2,7 +2,9 @@ package com.practica.turismoapp.presentation
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import com.practica.turismoapp.Constants
@@ -14,10 +16,21 @@ import kotlinx.coroutines.launch
 class SecondScreentActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySecondScreenBinding
+    // private var mutableListaTurismo: MutableList<Turismo>
+
+    private lateinit var adapter : AdapterTurismo
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivitySecondScreenBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
+     /*
+
+      binding.etFilter.addTextChangedListener { ProvinceFilter->
+           val ProvinceFilter = mutableListaTurismo.filter { Turismo -> Turismo.Provincia.contains(ProvinceFilter.toString())}
+            adapter.updateProvince(ProvinceFilter)
+        }
+   */
 
 
         //  val searchView = findViewById<SearchView>(R.id.SearchView)

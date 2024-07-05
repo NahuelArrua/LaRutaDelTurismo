@@ -16,7 +16,7 @@ interface TurismoClickedListener {
 }
 
 class AdapterTurismo(
-    private val listaTurismo: List<Turismo>,
+    private var listaTurismo: List<Turismo>,
     private val cuandoAgoClickedListener: TurismoClickedListener,
 ) :
     RecyclerView.Adapter<AdapterTurismo.MyViewHolder>() {
@@ -35,6 +35,14 @@ class AdapterTurismo(
     }
 
     override fun getItemCount(): Int = listaTurismo.size
+
+ /*
+
+  fun updateProvince(listaTurismo: List<Turismo>){
+        this.listaTurismo = listaTurismo
+        notifyDataSetChanged()
+    }
+ */
 
     inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val tvProvincia: TextView = view.findViewById(R.id.tvProvincia)

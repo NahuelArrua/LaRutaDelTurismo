@@ -2,7 +2,9 @@ package com.practica.turismoapp.presentation
 
 import android.content.Intent
 import android.os.Bundle
+import android.provider.ContactsContract.Contacts
 import androidx.appcompat.app.AppCompatActivity
+import coil.load
 import com.practica.turismoapp.Constants
 import com.practica.turismoapp.databinding.ActivityLugaresBinding
 
@@ -15,15 +17,14 @@ class LugaresActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        binding.tvLugares.setOnClickListener {
+        binding.tvProvincia.setOnClickListener {
             intent = Intent(this, DescripcionActivity::class.java)
             startActivity(intent)
         }
 
-
-
-        binding.tvLugares.text = Constants.traspasoDeTurismo?.Lugares
-        binding.tvLugaresTwo.text = Constants.traspasoDeTurismo?.Descripcion
-
+      //  binding.tvLugares.text = Constants.traspasoDeTurismo?.Lugares
+        binding.ivProvincias.load(Constants.traspasoDeTurismo?.Imagen)
+        binding.tvDescripcion.text = Constants.traspasoDeTurismo?.Descripcion
+        binding.tvProvincia.text = Constants.traspasoDeTurismo?.Provincia
     }
 }

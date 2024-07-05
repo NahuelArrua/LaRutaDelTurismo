@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import coil.load
 import com.practica.turismoapp.Constants
 import com.practica.turismoapp.R
 import com.practica.turismoapp.databinding.ActivityDescripcionBinding
@@ -15,31 +16,40 @@ class DescripcionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?)  {
         super.onCreate(savedInstanceState)
         binding = ActivityDescripcionBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_descripcion)
+        setContentView(binding.root)
 
-        binding.tvLugares.text = Constants.traspasoDeTurismo?.Lugares
+
+        binding.ivimagenUno.load(Constants.traspasoDeTurismo?.Imagen)
+        binding.ivimagenDos.load(Constants.traspasoDeTurismo?.Servicios)
+
+      //  binding.tvLugares.text = Constants.traspasoDeTurismo?.Lugares
 
 
       /*
       binding.ivInstagram.setOnClickListener {
             openUrl("")
         }
-      */
---r {
+      *//*
+
+      {
             openUrl(
                 "https://www.facebook.com/?locale=es_LA"
                 // Constants.traspasoDeTurismo?.RedesSociales
             )
         }
+      */
 
-        binding.btnLugares.setOnClickListener {
+       /*
+       binding.btnLugares.setOnClickListener {
             intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
 
-        binding.tvLugares.text = Constants.traspasoDeTurismo?.Lugares
+      */
+
+        //binding.tvLugares.text = Constants.traspasoDeTurismo?.Lugares
         // binding.ivTurismo.load(Constants.traspasoDeTurismo?.Imagen)
-        binding.ivInstagram.setOnClickListener { openUrl(Constants.traspasoDeTurismo?.RedesSociales) }
+       // binding.ivInstagram.setOnClickListener { openUrl(Constants.traspasoDeTurismo?.RedesSociales) }
 
     }
 
