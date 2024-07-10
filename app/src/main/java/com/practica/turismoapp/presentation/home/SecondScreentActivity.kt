@@ -2,6 +2,7 @@ package com.practica.turismoapp.presentation.home
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.practica.turismoapp.Constants.traspasoDeTurismo
@@ -32,9 +33,13 @@ class SecondScreentActivity : AppCompatActivity() {
     private fun setObserver() {
         homeViewModel.turismoGlam.observe(this) { lista ->
 
-//            var nLista = lista.Glamping.filter {
-//                it.Provincia.contains("Chaco") && it.Descripcion.contains("")
-//            }
+            // TODO solo para ver como recorre el map anidado
+            lista.Glamping.map { glamping ->
+                Log.d("Seba","Imagen" + glamping.ImagenPrincipal)//Es la imagen de la tabla glamping
+                glamping.Fotos?.map { lugar ->
+                    Log.d("Seba","Foto " + lugar.ImagenDetalle ?: "sin url de foto")//Es la imagen de la tabla photo
+                }
+            }
 
             binding.reciclerView.adapter = lista.let {
                 AdapterTurismo(it.Glamping, object : TurismoClickedListener {

@@ -47,10 +47,10 @@ class AdapterTurismoDos(
 
         fun bind(Glamping: Turismo) {
             tvLugares.text = Glamping.Lugares
-            ivimagenuno.load(Glamping.Imagen)
+            ivimagenuno.load(Glamping.ImagenPrincipal)
             ivimagendos.load(Glamping.Servicios)
             ivProvinciasDA.load(Glamping.Provincia)
-            ivProvincias.load(Glamping.Imagen)
+            ivProvincias.load(Glamping.ImagenPrincipal)
             tvDescripcion.text = Glamping.Descripcion
             tvProvincia.text = Glamping.Provincia
         }

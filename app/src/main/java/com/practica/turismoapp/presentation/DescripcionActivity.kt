@@ -21,13 +21,8 @@ class DescripcionActivity : AppCompatActivity() {
         binding = ActivityDescripcionBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-        binding.ivimagenUno.load(traspasoDeTurismo?.Imagen)
-        binding.ivimagenDos.load(traspasoDeTurismo?.Servicios)
-
-        Log.d("Seba",traspasoDeTurismo?.Lugares ?: "")
-        Log.d("Seba",traspasoDeTurismo?.Provincia ?: "")
-        Log.d("Seba",traspasoDeTurismo?.Servicios ?: "")
+        binding.ivimagenUno.load(traspasoDeTurismo?.Fotos?.get(0)?.ImagenDetalle)
+        binding.ivimagenDos.load(traspasoDeTurismo?.Fotos?.get(1)?.ImagenDetalle)
 
     }
 

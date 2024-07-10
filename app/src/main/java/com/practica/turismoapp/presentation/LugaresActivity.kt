@@ -24,7 +24,7 @@ class LugaresActivity : AppCompatActivity() {
         }
 
       //  binding.tvLugares.text = Constants.traspasoDeTurismo?.Lugares
-        binding.ivProvincias.load(Constants.traspasoDeTurismo?.Imagen)
+        binding.ivProvincias.load(Constants.traspasoDeTurismo?.ImagenPrincipal)
         binding.tvDescripcion.text = Constants.traspasoDeTurismo?.Descripcion
         binding.tvProvincia.text = Constants.traspasoDeTurismo?.Provincia
     }

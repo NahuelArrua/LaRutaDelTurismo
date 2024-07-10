@@ -50,7 +50,7 @@ class AdapterTurismo(
 
         fun bind(Glamping: Turismo) {
             tvProvincia.text = Glamping.Provincia
-            ivProvincias.load(Glamping.Imagen)
+            ivProvincias.load(Glamping.ImagenPrincipal)
         }
     }
 }
