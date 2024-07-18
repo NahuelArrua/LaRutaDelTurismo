@@ -51,12 +51,12 @@
     </style>
     <style name="Theme.TurismoApp" parent="Base.Theme.TurismoApp" />
 
+<!--
     <style name="Theme.ApiSplashScreen" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">#0C1D34</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/texto</item>
         <item name="windowSplashScreenAnimationDuration">300</item>
         <item name="postSplashScreenTheme">@style/Base.Theme.TurismoApp</item>
     </style>
-
-
+-->
 </resources>

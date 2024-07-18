@@ -16,15 +16,21 @@
         android:theme="@style/Theme.TurismoApp"
         tools:targetApi="31">
         <activity
-            android:name=".presentation.home.SecondScreentActivity"
+            android:name=".presentation.SplashActivity"
             android:exported="true">
-<!--            android:theme="@style/Theme.ApiSplashScreen">-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".presentation.HomeActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".presentation.home.SecondScreentActivity"
+            android:exported="false" />
         <activity
             android:name=".recyclerView.AdapterTresActivity"
             android:exported="false" />
@@ -37,9 +43,6 @@
         <activity
             android:name=".presentation.LugaresActivity"
             android:exported="false" />
-<!--        <activity-->
-<!--            android:name=".presentation.SecondScreentActivity"-->
-<!--            android:exported="false" />-->
     </application>
 
 </manifest>

@@ -45,12 +45,16 @@ class AdapterTurismo(
  */
 
     inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        private val tvProvincia: TextView = view.findViewById(R.id.tvProvincia)
+       // private val tvProvincia: TextView = view.findViewById(R.id.tvProvincia)
         private val ivProvincias: ImageView = view.findViewById(R.id.ivProvincias)
+        private val textLugares: TextView = view.findViewById(R.id.textLugares)
+
 
         fun bind(Glamping: Turismo) {
-            tvProvincia.text = Glamping.Provincia
+           // tvProvincia.text = Glamping.Provincia
             ivProvincias.load(Glamping.ImagenPrincipal)
+            textLugares.text = Glamping.Lugares
+
         }
     }
 }

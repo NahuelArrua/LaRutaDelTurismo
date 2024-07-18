@@ -14,7 +14,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -24,7 +23,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/textLugares"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
@@ -59,7 +58,7 @@
             </ViewFlipper>
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/textDescripcion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -74,12 +73,14 @@ Un emprendimiento turístico en los Esteros del Iberá que busca brindar un serv
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/imageone"
                     android:layout_width="match_parent"
-                    android:layout_height="180dp"
+                    android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:background="@drawable/los_glampings" />
+                    tools:src="@drawable/los_glampings" />
 
                 <TextView
+                    android:id="@+id/textServicios"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="22sp"
@@ -88,10 +89,11 @@ Un emprendimiento turístico en los Esteros del Iberá que busca brindar un serv
                     android:text="Gastronomia"/>
 
                 <ImageView
+                    android:id="@+id/ivGastronomy"
                     android:layout_width="match_parent"
-                    android:layout_height="180dp"
+                    android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:src="@drawable/gastronomia_cinco" />
+                    android:src="@drawable/glamping_guyra" />
 
             </LinearLayout>
 
@@ -135,7 +137,6 @@ Un emprendimiento turístico en los Esteros del Iberá que busca brindar un serv
                     android:text="Facebook"
                     android:textSize="20dp"
                     android:textStyle="italic" />
-
 
             </LinearLayout>
 

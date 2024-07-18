@@ -15,7 +15,7 @@ import org.w3c.dom.Text
 
 
 class AdapterTurismoDos(
-    private val listaTurismo: List<Turismo>
+    private val listaTurismo: List<Turismo>,
 ) :
     RecyclerView.Adapter<AdapterTurismoDos.MyViewHolder>() {
 
@@ -36,23 +36,31 @@ class AdapterTurismoDos(
 
 
     inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        private val tvLugares: TextView = view.findViewById(R.id.tvLugares)
         private val ivimagenuno: ImageView = view.findViewById(R.id.ivimagenUno)
         private val ivimagendos: ImageView = view.findViewById(R.id.ivimagenDos)
-        private val ivProvinciasDA: ImageView = view.findViewById(R.id.ivProvincias)
-        private val ivProvincias: ImageView = view.findViewById(R.id.ivProvincias)
-        private val tvDescripcion: TextView = view.findViewById(R.id.tvDescripcion)
-        private val tvProvincia: TextView = view.findViewById(R.id.tvProvincia)
+        private val imageOne: ImageView = view.findViewById(R.id.imageone)
+        private val imageTwo: ImageView = view.findViewById(R.id.ivGastronomy)
+
+
+        private val textServicios: TextView = view.findViewById(R.id.textServicios)
+       // private val textLugares: TextView = view.findViewById(R.id.tvLugares)
+        private val textDescripcion: TextView = view.findViewById(R.id.textDescripcion)
+      //  private val tvLugares: TextView = view.findViewById(R.id.tvLugares)
 
 
         fun bind(Glamping: Turismo) {
-            tvLugares.text = Glamping.Lugares
-            ivimagenuno.load(Glamping.ImagenPrincipal)
-            ivimagendos.load(Glamping.Servicios)
-            ivProvinciasDA.load(Glamping.Provincia)
-            ivProvincias.load(Glamping.ImagenPrincipal)
-            tvDescripcion.text = Glamping.Descripcion
-            tvProvincia.text = Glamping.Provincia
+            ivimagenuno.load(Glamping.Fotos)
+            ivimagendos.load(Glamping.Fotos)
+            imageOne.load(Glamping.Fotos)
+            imageTwo.load(Glamping.Fotos)
+
+
+            textServicios.text = Glamping.Servicios
+          //  textLugares.text = Glamping.Lugares
+            textDescripcion.text = Glamping.Descripcion
+           // tvLugares.text = Glamping.Lugares
+
+
         }
     }
 }
