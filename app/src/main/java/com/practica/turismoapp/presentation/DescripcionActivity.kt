@@ -29,6 +29,7 @@ class DescripcionActivity : AppCompatActivity() {
         binding.textServicios.text = Constants.traspasoDeTurismo?.Servicios
         binding.textLugares.text = Constants.traspasoDeTurismo?.Lugares
         binding.textDescripcion.text = Constants.traspasoDeTurismo?.Descripcion
+        binding.ivInstagram.setOnClickListener { openUrl(Constants.traspasoDeTurismo?.RedesSociales) }
     }
 
     private fun openUrl(RedesSociales: String?) {
