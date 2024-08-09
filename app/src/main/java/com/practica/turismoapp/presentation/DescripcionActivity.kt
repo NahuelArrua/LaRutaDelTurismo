@@ -24,7 +24,10 @@ class DescripcionActivity : AppCompatActivity() {
         binding.ivimagenDos.load(traspasoDeTurismo?.Fotos?.let { it.get(1).ImagenDetalle })
         binding.imageone.load(traspasoDeTurismo?.Fotos?.let { it.get(2).ImagenDetalle })
         binding.ivGastronomy.load(traspasoDeTurismo?.Fotos?.let { it.get(3).ImagenDetalle })
-
+        binding.ivContenido.load(traspasoDeTurismo?.Fotos?.let { it.get(4).ImagenDetalle })
+        binding.ivContenidoDos.load(traspasoDeTurismo?.Fotos?.let { it.get(5).ImagenDetalle })
+        binding.ivContenidoTres.load(traspasoDeTurismo?.Fotos?.let { it.get(6).ImagenDetalle })
+        binding.ivContenidoCuatro.load(traspasoDeTurismo?.Fotos?.let { it.get(7).ImagenDetalle })
 
         binding.textServicios.text = Constants.traspasoDeTurismo?.Servicios
         binding.textLugares.text = Constants.traspasoDeTurismo?.Lugares

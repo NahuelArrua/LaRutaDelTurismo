@@ -37,23 +37,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
                 android:autoStart="true"
                 android:flipInterval="4000"
                 android:inAnimation="@android:anim/slide_in_left"
                 android:outAnimation="@android:anim/slide_out_right">
 
+
                 <ImageView
                     android:id="@+id/ivimagenUno"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:scaleType="centerCrop" />
 
                 <ImageView
                     android:id="@+id/ivimagenDos"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:scaleType="centerCrop"/>
 
             </ViewFlipper>
 
@@ -64,8 +66,7 @@
                 android:layout_margin="10dp"
                 android:text="Somos Guyra Angaicha•
 Un emprendimiento turístico en los Esteros del Iberá que busca brindar un servicio de excelencia all inclusive a un precio accesible para las personas que nos elijan. Vení a vivir esta aventura con nosotros, no te vas arrepentir."
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textSize="16sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -75,25 +76,60 @@ Un emprendimiento turístico en los Esteros del Iberá que busca brindar un serv
                 <ImageView
                     android:id="@+id/imageone"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="240dp"
+                    android:scaleType="centerCrop"
                     android:layout_margin="10dp"
-                    tools:src="@drawable/los_glampings" />
+                    tools:src="@drawable/glamping"/>
+
+
+                <ImageView
+                    android:id="@+id/ivGastronomy"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:scaleType="centerCrop"
+                    android:layout_margin="10dp"
+                    tools:src="@drawable/glamping"/>
+
+                <ImageView
+                    android:id="@+id/ivContenido"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:layout_margin="10dp"
+                    android:scaleType="centerCrop"
+                    tools:src="@drawable/glamping"/>
 
                 <TextView
                     android:id="@+id/textServicios"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="22sp"
-                    android:gravity="center"
-                    android:textStyle="italic"
+                    android:textSize="18sp"
+                    android:layout_margin="5dp"
                     android:text="Gastronomia"/>
 
+
                 <ImageView
-                    android:id="@+id/ivGastronomy"
+                    android:id="@+id/ivContenidoDos"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="300dp"
                     android:layout_margin="10dp"
-                    android:src="@drawable/glamping_guyra" />
+                    android:scaleType="centerCrop"
+                    tools:src="@drawable/glamping_guyra"/>
+
+                <ImageView
+                    android:id="@+id/ivContenidoTres"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    android:layout_margin="10dp"
+                    android:scaleType="centerCrop"
+                    tools:src="@drawable/glamping" />
+
+                <ImageView
+                    android:id="@+id/ivContenidoCuatro"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    android:layout_margin="10dp"
+                    android:scaleType="centerCrop"
+                    tools:src="@drawable/glamping"/>
 
             </LinearLayout>
 
