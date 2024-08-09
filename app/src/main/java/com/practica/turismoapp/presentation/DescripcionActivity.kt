@@ -22,7 +22,7 @@ class DescripcionActivity : AppCompatActivity() {
 
         binding.ivimagenUno.load(traspasoDeTurismo?.Fotos?.let { it.get(0).ImagenDetalle })
         binding.ivimagenDos.load(traspasoDeTurismo?.Fotos?.let { it.get(1).ImagenDetalle })
-        binding.imageone.load(traspasoDeTurismo?.Fotos?.let { it.get(2).ImagenDetalle })
+        binding.imageone.load(traspasoDeTurismo?.Fotos?.let { it.get(2).ImagenDetalle }) { this.size(600,500) }
         binding.ivGastronomy.load(traspasoDeTurismo?.Fotos?.let { it.get(3).ImagenDetalle })
         binding.ivContenido.load(traspasoDeTurismo?.Fotos?.let { it.get(4).ImagenDetalle })
         binding.ivContenidoDos.load(traspasoDeTurismo?.Fotos?.let { it.get(5).ImagenDetalle })

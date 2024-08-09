@@ -10,7 +10,6 @@ import com.practica.turismoapp.data.Turismo
 import com.practica.turismoapp.databinding.ActivitySecondScreenBinding
 import com.practica.turismoapp.presentation.AdapterTurismo
 import com.practica.turismoapp.presentation.DescripcionActivity
-import com.practica.turismoapp.presentation.LugaresActivity
 import com.practica.turismoapp.presentation.TurismoClickedListener
 
 class SecondScreentActivity : AppCompatActivity() {
@@ -28,6 +27,11 @@ class SecondScreentActivity : AppCompatActivity() {
         binding.reciclerView.layoutManager = GridLayoutManager(this, 1)
 
         setObserver()
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        this.finishAffinity()
     }
 
     private fun setObserver() {

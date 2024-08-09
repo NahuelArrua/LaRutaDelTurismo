@@ -7,8 +7,11 @@
     android:layout_height="match_parent"
     tools:context=".presentation.SplashActivity">
 
-
-
-
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/deluxe"
+        >
+    </ImageView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
