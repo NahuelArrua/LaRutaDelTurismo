@@ -22,7 +22,7 @@ class AdapterTurismoDos(
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): MyViewHolder {
         val view = LayoutInflater.from(viewGroup.context)
-            .inflate(R.layout.item_layout, viewGroup, false)
+            .inflate(R.layout.item_list, viewGroup, false)
         return MyViewHolder(view)
     }
 
