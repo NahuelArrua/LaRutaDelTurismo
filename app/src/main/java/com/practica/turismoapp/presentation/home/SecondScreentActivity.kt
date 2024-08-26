@@ -1,11 +1,13 @@
 package com.practica.turismoapp.presentation.home
 
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.practica.turismoapp.Constants.traspasoDeTurismo
+import com.practica.turismoapp.R
 import com.practica.turismoapp.data.Turismo
 import com.practica.turismoapp.databinding.ActivitySecondScreenBinding
 import com.practica.turismoapp.presentation.AdapterTurismo
@@ -37,14 +39,6 @@ class SecondScreentActivity : AppCompatActivity() {
     private fun setObserver() {
         homeViewModel.turismoGlam.observe(this) { lista ->
 
-            // TODO solo para ver como recorre el map anidado
-            lista.Glamping.map { glamping ->
-                Log.d("Seba","Imagen" + glamping.ImagenPrincipal)//Es la imagen de la tabla glamping
-                glamping.Fotos?.map { lugar ->
-                    Log.d("Seba","Foto " + lugar.ImagenDetalle ?: "sin url de foto")//Es la imagen de la tabla photo
-                }
-            }
-
             binding.reciclerView.adapter = lista.let {
                 AdapterTurismo(it.Glamping, object : TurismoClickedListener {
                     override fun onTurismoClicked(turismo: Turismo) {
@@ -57,6 +51,24 @@ class SecondScreentActivity : AppCompatActivity() {
                 )
             }
         }
+
+        homeViewModel.errorMessage.observe(this) {
+            if (it) {
+                AlertDialog.Builder(this)
+                    .setTitle(getString(R.string.upps))
+                    .setMessage(getString(R.string.fail_connection))
+                    .setPositiveButton(getString(R.string.entendido)) { _, _ ->
+                        finishAffinity()
+                    }
+                    .setOnDismissListener { finishAffinity() }
+                    .setIcon(R.drawable.error_message)
+                    .show()
+                    .run {
+                        getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getColor(R.color.black))
+                    }
+            }
+        }
+
         homeViewModel.getLugares()
     }
 }
