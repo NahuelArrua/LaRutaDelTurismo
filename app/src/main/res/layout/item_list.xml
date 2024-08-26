@@ -18,22 +18,32 @@
 
     <ImageView
         android:id="@+id/ivProvincias"
-        android:layout_width="400dp"
+        android:layout_width="match_parent"
         android:layout_height="170dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textLugares" />
 
+    <ImageView
+        android:id="@+id/ivGradient"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:src="@drawable/gradient_black_bottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/ivProvincias" />
+
     <TextView
         android:id="@+id/tvDireccion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
         android:layout_marginStart="4dp"
         android:gravity="start"
+        android:textColor="@color/white"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivProvincias" />
+        app:layout_constraintBottom_toBottomOf="@+id/ivProvincias" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
