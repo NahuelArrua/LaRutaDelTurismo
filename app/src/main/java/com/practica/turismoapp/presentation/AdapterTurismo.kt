@@ -23,7 +23,7 @@ class AdapterTurismo(
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): MyViewHolder {
         val view = LayoutInflater.from(viewGroup.context)
-            .inflate(R.layout.item_layout, viewGroup, false)
+            .inflate(R.layout.item_list, viewGroup, false)
         return MyViewHolder(view)
 
     }
@@ -48,12 +48,13 @@ class AdapterTurismo(
        // private val tvProvincia: TextView = view.findViewById(R.id.tvProvincia)
         private val ivProvincias: ImageView = view.findViewById(R.id.ivProvincias)
         private val textLugares: TextView = view.findViewById(R.id.textLugares)
+        private val tvDirection: TextView = view.findViewById(R.id.tvDireccion)
 
 
         fun bind(Glamping: Turismo) {
-           // tvProvincia.text = Glamping.Provincia
             ivProvincias.load(Glamping.ImagenPrincipal)
             textLugares.text = Glamping.Lugares
+            tvDirection.text = Glamping.Provincia
 
         }
     }
