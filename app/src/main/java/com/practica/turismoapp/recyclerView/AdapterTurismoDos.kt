@@ -22,7 +22,7 @@ class AdapterTurismoDos(
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): MyViewHolder {
         val view = LayoutInflater.from(viewGroup.context)
-            .inflate(R.layout.item_layout, viewGroup, false)
+            .inflate(R.layout.item_list, viewGroup, false)
         return MyViewHolder(view)
     }
 
@@ -40,8 +40,6 @@ class AdapterTurismoDos(
         private val ivimagendos: ImageView = view.findViewById(R.id.ivimagenDos)
         private val imageOne: ImageView = view.findViewById(R.id.imageone)
         private val imageTwo: ImageView = view.findViewById(R.id.ivGastronomy)
-
-
         private val textServicios: TextView = view.findViewById(R.id.textServicios)
        // private val textLugares: TextView = view.findViewById(R.id.tvLugares)
         private val textDescripcion: TextView = view.findViewById(R.id.textDescripcion)
@@ -53,8 +51,6 @@ class AdapterTurismoDos(
             ivimagendos.load(Glamping.Fotos)
             imageOne.load(Glamping.Fotos)
             imageTwo.load(Glamping.Fotos)
-
-
             textServicios.text = Glamping.Servicios
           //  textLugares.text = Glamping.Lugares
             textDescripcion.text = Glamping.Descripcion

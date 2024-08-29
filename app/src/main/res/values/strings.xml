@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">TurismoApp</string>
+    <string name="upps">Upps..</string>
+    <string name="fail_connection">No podemos acceder a los datos en este momento, verificá tu conexion a internet y reintentalo mas tarde..</string>
+    <string name="entendido">Entendido</string>
+    <string name="lugares_para_disfrutar">Lugares para disfrutar</string>
 </resources>

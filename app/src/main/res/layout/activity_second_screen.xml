@@ -13,68 +13,52 @@
     tools:context=".presentation.home.SecondScreentActivity">
 
 
-
-<!--    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cardView2"
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/md_theme_surfaceDim_highContrast"
-        android:checkable="true"
-        android:clickable="true"
-        android:focusable="true"
+        android:gravity="start"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <ImageView
+            android:id="@+id/ivProvincias"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:src="@mipmap/ic_launcher_foreground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textLugares" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/textLugares"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="@string/lugares_para_disfrutar"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="70dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                android:src="@drawable/logo" />
 
-            <TextView
-                android:id="@+id/tvLugares"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:layout_marginLeft="10sp"
-                android:layout_marginTop="30sp"
-                android:text="La Ruta del Turismo"
-                android:textColor="@color/black"
-                android:textSize="24sp"
-                android:textStyle="italic" />
-
-        </LinearLayout>
-
-        <EditText
-            android:id="@+id/etFilter"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:singleLine="true"
-            android:maxLines="1"
-            tools:text="@string/app_name"
-            android:layout_marginTop="80dp">
-        </EditText>
-
-    </com.google.android.material.card.MaterialCardView>-->
-
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/reciclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="24dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
