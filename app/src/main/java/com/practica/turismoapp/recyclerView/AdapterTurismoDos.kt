@@ -8,10 +8,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.practica.turismoapp.Constants
 import com.practica.turismoapp.R
 import com.practica.turismoapp.data.Turismo
-import org.w3c.dom.Text
 
 
 class AdapterTurismoDos(
@@ -46,6 +44,8 @@ class AdapterTurismoDos(
       //  private val tvLugares: TextView = view.findViewById(R.id.tvLugares)
 
 
+
+
         fun bind(Glamping: Turismo) {
             ivimagenuno.load(Glamping.Fotos)
             ivimagendos.load(Glamping.Fotos)
@@ -55,6 +55,7 @@ class AdapterTurismoDos(
           //  textLugares.text = Glamping.Lugares
             textDescripcion.text = Glamping.Descripcion
            // tvLugares.text = Glamping.Lugares
+
 
 
         }

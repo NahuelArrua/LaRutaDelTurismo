@@ -51,6 +51,9 @@ class AdapterTurismo(
         private val tvDirection: TextView = view.findViewById(R.id.tvDireccion)
 
 
+
+
+
         fun bind(Glamping: Turismo) {
             ivProvincias.load(Glamping.ImagenPrincipal)
             textLugares.text = Glamping.Lugares

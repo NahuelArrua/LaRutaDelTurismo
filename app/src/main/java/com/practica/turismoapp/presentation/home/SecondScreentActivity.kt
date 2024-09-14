@@ -13,6 +13,7 @@ import com.practica.turismoapp.databinding.ActivitySecondScreenBinding
 import com.practica.turismoapp.presentation.AdapterTurismo
 import com.practica.turismoapp.presentation.DescripcionActivity
 import com.practica.turismoapp.presentation.TurismoClickedListener
+import com.practica.turismoapp.presentation.about.About_Activity
 
 class SecondScreentActivity : AppCompatActivity() {
 
@@ -27,6 +28,11 @@ class SecondScreentActivity : AppCompatActivity() {
 
         binding.reciclerView.setHasFixedSize(true)
         binding.reciclerView.layoutManager = GridLayoutManager(this, 1)
+
+        binding.ivProvincias.setOnClickListener {
+            intent = Intent(this, About_Activity::class.java)
+            startActivity(intent)
+        }
 
         setObserver()
     }

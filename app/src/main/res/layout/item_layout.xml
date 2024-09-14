@@ -32,6 +32,7 @@
         android:id="@+id/ivProvincias"
         android:layout_width="400dp"
         android:layout_height="170dp"
+        android:scaleType="center"
         tools:background="@drawable/glamping_interior" />
     </LinearLayout>
 

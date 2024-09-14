@@ -7,8 +7,8 @@
                 android:type="linear"
                 android:startColor="@color/black"
                 android:endColor="#00000000"
-                >
 
+                >
             </gradient>
         </shape>
     </item>

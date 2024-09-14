@@ -146,5 +146,7 @@
     <color name="md_theme_surfaceContainerHighest_highContrast">#E2E3D8</color>
     <color name="indigo900">#1A237E</color>
 
+    <color name="gris">#9E9E9E</color>
+
 
 </resources>

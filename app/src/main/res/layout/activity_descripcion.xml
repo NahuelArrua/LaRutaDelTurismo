@@ -102,8 +102,9 @@ Un emprendimiento turístico en los Esteros del Iberá que busca brindar un serv
                     android:id="@+id/textServicios"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:layout_margin="5dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16sp"
+                    android:layout_margin="10dp"
                     android:text="Gastronomia"/>
 
 
@@ -141,17 +142,17 @@ Un emprendimiento turístico en los Esteros del Iberá que busca brindar un serv
 
                 <ImageView
                     android:id="@+id/ivInstagram"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
                     android:layout_margin="20dp"
                     android:src="@drawable/instagram" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="25dp"
                     android:text="Instagram"
-                    android:textSize="20dp"
+                    android:textSize="18dp"
                     android:textStyle="italic" />
 
             </LinearLayout>
@@ -162,16 +163,17 @@ Un emprendimiento turístico en los Esteros del Iberá que busca brindar un serv
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:id="@+id/ivwhatssap"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
                     android:layout_margin="20dp"
-                    android:src="@drawable/face" />
+                    android:src="@drawable/whassap" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
-                    android:text="Facebook"
+                    android:layout_marginTop="25dp"
+                    android:text="Whatssap"
                     android:textSize="20dp"
                     android:textStyle="italic" />
 

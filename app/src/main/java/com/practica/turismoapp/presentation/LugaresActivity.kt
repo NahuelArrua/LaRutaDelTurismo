@@ -2,13 +2,11 @@ package com.practica.turismoapp.presentation
 
 import android.content.Intent
 import android.os.Bundle
-import android.provider.ContactsContract.Contacts
 import androidx.appcompat.app.AppCompatActivity
 import coil.load
 import com.practica.turismoapp.Constants
-import com.practica.turismoapp.data.Foto
-import com.practica.turismoapp.data.Turismo
 import com.practica.turismoapp.databinding.ActivityLugaresBinding
+import com.practica.turismoapp.presentation.about.About_Activity
 
 
 class LugaresActivity : AppCompatActivity() {
@@ -22,6 +20,10 @@ class LugaresActivity : AppCompatActivity() {
             intent = Intent(this, DescripcionActivity::class.java)
             startActivity(intent)
         }
+        binding.ivProvincias.setOnClickListener {
+            intent = Intent(this, About_Activity::class.java)
+            startActivity(intent)
+        }
 
       //  binding.tvLugares.text = Constants.traspasoDeTurismo?.Lugares
         binding.ivProvincias.load(Constants.traspasoDeTurismo?.ImagenPrincipal)
@@ -29,4 +31,5 @@ class LugaresActivity : AppCompatActivity() {
         binding.tvProvincia.text = Constants.traspasoDeTurismo?.Provincia
 
     }
+
 }
