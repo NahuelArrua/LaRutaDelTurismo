@@ -22,7 +22,10 @@ Los objetos complementarios en Kotlin son objetos que están vinculados a una cl
 
 object Constants {
 
-    var URL_BASE:String = "http://149.50.140.123/"
+    val prod = "http://149.50.140.123/"
+    val preprod = "http://149.50.140.123:81/"
+
+    var URL_BASE:String = preprod
 
     var traspasoDeTurismo: Turismo? = null
 

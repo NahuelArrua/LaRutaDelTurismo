@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
+import coil.size.Scale
 import com.practica.turismoapp.R
 import com.practica.turismoapp.data.Turismo
 
@@ -55,7 +56,10 @@ class AdapterTurismo(
 
 
         fun bind(Glamping: Turismo) {
-            ivProvincias.load(Glamping.ImagenPrincipal)
+            ivProvincias.load(Glamping.ImagenPrincipal) {
+                scale(Scale.FIT)
+                crossfade(2_000)
+            }
             textLugares.text = Glamping.Lugares
             tvDirection.text = Glamping.Provincia
 
