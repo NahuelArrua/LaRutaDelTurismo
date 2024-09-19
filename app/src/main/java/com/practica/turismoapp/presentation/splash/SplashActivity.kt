@@ -1,4 +1,4 @@
-package com.practica.turismoapp.presentation
+package com.practica.turismoapp.presentation.splash
 
 import android.content.Intent
 import android.os.Bundle

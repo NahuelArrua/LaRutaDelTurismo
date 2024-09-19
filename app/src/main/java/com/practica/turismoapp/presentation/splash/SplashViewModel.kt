@@ -1,4 +1,4 @@
-package com.practica.turismoapp.presentation
+package com.practica.turismoapp.presentation.splash
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
