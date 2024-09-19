@@ -4,5 +4,5 @@
     <string name="fail_connection">No podemos acceder a los datos en este momento, verificá tu conexion a internet y reintentalo mas tarde..</string>
     <string name="entendido">Entendido</string>
     <string name="lugares_para_disfrutar">Lugares para disfrutar</string>
-    <string name="description_about">Resting es una aplicacion de lugares\nhermosos conocer.</string>
+    <string name="description_about">Resting es una aplicacion de lugares\n donde alojarse, disfrutar o hacer alguna actividad.</string>
 </resources>

@@ -16,6 +16,15 @@
         android:theme="@style/Theme.TurismoApp"
         tools:targetApi="n">
         <activity
+            android:name=".presentation.login.AddActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.login.Login_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.login.loginActivity"
+            android:exported="false" />
+        <activity
             android:name=".presentation.about.About_Activity"
             android:exported="false" />
         <activity
@@ -29,7 +38,7 @@
         </activity>
         <activity
             android:name=".presentation.HomeActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".presentation.home.SecondScreentActivity"
             android:exported="false" />

@@ -19,3 +19,7 @@ class RepositoryTurismoImpl(
         }
     }
 }
+
+interface RepositoryUser {
+    suspend fun getUser():ResultType
+}

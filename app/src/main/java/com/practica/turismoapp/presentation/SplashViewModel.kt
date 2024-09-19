@@ -18,5 +18,4 @@ class SplashViewModel(): ViewModel() {
             _screen.value = true
         }
     }
-
 }

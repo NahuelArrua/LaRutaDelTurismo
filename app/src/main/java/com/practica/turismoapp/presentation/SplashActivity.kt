@@ -18,7 +18,6 @@ class SplashActivity : AppCompatActivity() {
         initObserver()
     }
 
-
     fun initObserver() {
         splashViewModel.screen.observeForever { screen ->
             when (screen) {
@@ -31,5 +30,4 @@ class SplashActivity : AppCompatActivity() {
     fun goToHome() {
         startActivity(Intent(ctx, SecondScreentActivity::class.java))
     }
-
 }

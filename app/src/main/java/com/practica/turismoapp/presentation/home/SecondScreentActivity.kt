@@ -9,11 +9,13 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.practica.turismoapp.Constants.traspasoDeTurismo
 import com.practica.turismoapp.R
 import com.practica.turismoapp.data.Turismo
+import com.practica.turismoapp.databinding.ActivityLoginBinding
 import com.practica.turismoapp.databinding.ActivitySecondScreenBinding
 import com.practica.turismoapp.presentation.AdapterTurismo
 import com.practica.turismoapp.presentation.DescripcionActivity
 import com.practica.turismoapp.presentation.TurismoClickedListener
 import com.practica.turismoapp.presentation.about.About_Activity
+import com.practica.turismoapp.presentation.login.Login_Activity
 
 class SecondScreentActivity : AppCompatActivity() {
 
@@ -29,8 +31,14 @@ class SecondScreentActivity : AppCompatActivity() {
         binding.reciclerView.setHasFixedSize(true)
         binding.reciclerView.layoutManager = GridLayoutManager(this, 1)
 
-        binding.ivProvincias.setOnClickListener {
+
+        binding.ivMenu.setOnClickListener {
             intent = Intent(this, About_Activity::class.java)
+            startActivity(intent)
+        }
+
+        binding.ivAdd.setOnClickListener {
+            intent = Intent(this, Login_Activity::class.java )
             startActivity(intent)
         }
 

@@ -41,5 +41,4 @@ class DescripcionActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-
 }
