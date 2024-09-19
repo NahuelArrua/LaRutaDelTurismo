@@ -2,6 +2,7 @@ package com.practica.turismoapp.network
 
 
 import com.practica.turismoapp.data.TurismoGlam
+import com.practica.turismoapp.data.User
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -13,5 +14,5 @@ interface APIService {
     suspend fun getDatosTurismo(): TurismoGlam
 
     @POST("auth")
-    suspend fun getDatosUruarios(@Body user:User): Response<User>
+    suspend fun getLogin(@Body user: User): User
 }

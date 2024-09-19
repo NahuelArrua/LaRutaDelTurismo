@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import coil.load
 import com.practica.turismoapp.Constants
 import com.practica.turismoapp.databinding.ActivityLugaresBinding
-import com.practica.turismoapp.presentation.about.About_Activity
+import com.practica.turismoapp.presentation.about.AboutActivity
 
 
 class LugaresActivity : AppCompatActivity() {
@@ -21,7 +21,7 @@ class LugaresActivity : AppCompatActivity() {
             startActivity(intent)
         }
         binding.ivProvincias.setOnClickListener {
-            intent = Intent(this, About_Activity::class.java)
+            intent = Intent(this, AboutActivity::class.java)
             startActivity(intent)
         }
 

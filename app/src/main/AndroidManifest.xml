@@ -16,16 +16,13 @@
         android:theme="@style/Theme.TurismoApp"
         tools:targetApi="n">
         <activity
-            android:name=".presentation.login.AddActivity"
+            android:name=".presentation.AddActivity"
             android:exported="false" />
         <activity
-            android:name=".presentation.login.Login_Activity"
+            android:name=".presentation.login.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".presentation.login.loginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".presentation.about.About_Activity"
+            android:name=".presentation.about.AboutActivity"
             android:exported="false" />
         <activity
             android:name=".presentation.SplashActivity"

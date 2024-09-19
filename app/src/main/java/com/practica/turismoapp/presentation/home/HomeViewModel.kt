@@ -8,6 +8,7 @@ import com.practica.turismoapp.data.Foto
 import com.practica.turismoapp.data.ResultType
 import com.practica.turismoapp.data.Turismo
 import com.practica.turismoapp.data.TurismoGlam
+import com.practica.turismoapp.data.User
 import com.practica.turismoapp.repository.RepositoryTurismoImpl
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -28,7 +29,7 @@ class HomeViewModel() : ViewModel() {
         viewModelScope.launch {
             when (val listPlaces = withContext(Dispatchers.IO){ repositoryTurismo.getListPlaces() }) {
                 is ResultType.Success -> {
-                    _turismoGlam.value = listPlaces.data
+                    _turismoGlam.value = listPlaces.data as TurismoGlam
                 }
                 is ResultType.Error -> _errorMessage.postValue(true)
             }
