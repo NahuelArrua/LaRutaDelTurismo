@@ -2,6 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="fondoCamera">#E6E6E6</color>
 
     <color name="md_theme_primary">#3D5F90</color>
     <color name="md_theme_onPrimary">#FFFFFF</color>

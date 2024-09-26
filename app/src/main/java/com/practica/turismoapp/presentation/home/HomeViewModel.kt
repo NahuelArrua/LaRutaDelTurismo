@@ -8,15 +8,14 @@ import com.practica.turismoapp.data.Foto
 import com.practica.turismoapp.data.ResultType
 import com.practica.turismoapp.data.Turismo
 import com.practica.turismoapp.data.TurismoGlam
-import com.practica.turismoapp.data.User
-import com.practica.turismoapp.repository.RepositoryTurismoImpl
+import com.practica.turismoapp.repository.TurismoRepositoryImpl
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class HomeViewModel() : ViewModel() {
 
-    val repositoryTurismo = RepositoryTurismoImpl()
+    val repositoryTurismo = TurismoRepositoryImpl()
 
     private var _turismoGlam = MutableLiveData<TurismoGlam>()
     val turismoGlam: LiveData<TurismoGlam> = _turismoGlam

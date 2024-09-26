@@ -67,13 +67,13 @@ class SecondScreentActivity : AppCompatActivity() {
         homeViewModel.errorMessage.observe(this) {
             if (it) {
                 AlertDialog.Builder(this)
+                    .setIcon(R.drawable.error_message)
                     .setTitle(getString(R.string.upps))
                     .setMessage(getString(R.string.fail_connection))
                     .setPositiveButton(getString(R.string.entendido)) { _, _ ->
-                        .setOnDismissListener { finishAffinity() }
-                        .setIcon(R.drawable.error_message)
                         finishAffinity()
                     }
+                    .setOnDismissListener { finishAffinity() }
                     .show()
                     .run {
                         getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getColor(R.color.black))

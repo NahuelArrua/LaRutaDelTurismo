@@ -9,20 +9,34 @@
     tools:context=".presentation.selector.SelectorActivity">
 
     <ImageView
-        android:id="@+id/ivSelector"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:src="@drawable/cargra_imagen"
-        app:layout_constraintBottom_toTopOf="@+id/editTextText"
+        android:id="@+id/ivPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_margin="16dp"
+        android:background="@color/fondoCamera"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/tv_description"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/ivTake"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/camera"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPhoto"
+        app:layout_constraintRight_toRightOf="@+id/ivPhoto" />
+
 
     <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:id="@+id/tv_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
         android:ems="10"
         android:hint="Descripcion"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -31,13 +45,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnImage"
+        android:id="@+id/btn_compartir"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="Compatir"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_description" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
