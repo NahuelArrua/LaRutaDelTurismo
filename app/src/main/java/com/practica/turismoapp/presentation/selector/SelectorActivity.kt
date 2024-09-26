@@ -1,6 +1,8 @@
 package com.practica.turismoapp.presentation.selector
 
 import android.content.DialogInterface
+import android.content.Intent
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -8,12 +10,11 @@ import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.LifecycleCoroutineScope
-import androidx.lifecycle.LifecycleOwner
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
 import com.practica.turismoapp.R
 import com.practica.turismoapp.databinding.ActivitySelectorBinding
-import kotlinx.coroutines.Delay
+import com.practica.turismoapp.writeMessage
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -43,6 +44,26 @@ class SelectorActivity : AppCompatActivity() {
 
         setupLister()
         setupObservers()
+        setupPermission()
+    }
+
+    private fun setupPermission() {
+        val requestPermissionsLauncher = registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) {}
+        val permissions = getPermissionFiles()
+        val allPermissionsGranted = permissions.all { permission ->
+            ContextCompat.checkSelfPermission(ctx, permission) == PackageManager.PERMISSION_GRANTED
+        }
+
+        if (!allPermissionsGranted) {
+            requestPermissionsLauncher.launch(permissions.toTypedArray())
+        }
+
+    }
+
+    private fun getPermissionFiles(): MutableList<String> {
+        val permissions = mutableListOf<String>()
+        permissions.add(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
+        return permissions
     }
 
     private fun setupObservers() {
@@ -53,7 +74,8 @@ class SelectorActivity : AppCompatActivity() {
             lifecycleScope.launch {
                 Toast.makeText(ctx,"Imagen subida en ${it.fileDownloadUri}",Toast.LENGTH_SHORT).show()
                 delay(2_000L)
-                finishAffinity()
+                finish()
+                it.fileDownloadUri?.let { url -> writeMessage(ctx, url) }
             }
         }
         viewModel.errorMessage.observe(this) {
@@ -63,9 +85,9 @@ class SelectorActivity : AppCompatActivity() {
                     .setTitle(getString(R.string.upps))
                     .setMessage(getString(R.string.error_al_levantar_el_archivo))
                     .setPositiveButton(getString(R.string.entendido)) { _, _ ->
-                        finishAffinity()
+                        finish()
                     }
-                    .setOnDismissListener { finishAffinity() }
+                    .setOnDismissListener { finish() }
                     .show()
                     .run {
                         getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getColor(R.color.black))
@@ -76,7 +98,7 @@ class SelectorActivity : AppCompatActivity() {
 
     fun setupLister() {
         binding.apply {
-            ivPhoto.setOnClickListener {
+            ivTake.setOnClickListener {
                 pickMedia.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
             }
             btnCompartir.setOnClickListener {

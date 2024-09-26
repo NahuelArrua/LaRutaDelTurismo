@@ -10,5 +10,6 @@ object Constants {
     var URL_BASE:String = preprod
 
     var traspasoDeTurismo: Turismo? = null
+    var contactNumber = "3794023483"
 
 }
