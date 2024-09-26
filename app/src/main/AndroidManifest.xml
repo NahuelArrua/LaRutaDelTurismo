@@ -16,6 +16,9 @@
         android:theme="@style/Theme.TurismoApp"
         tools:targetApi="n">
         <activity
+            android:name=".presentation.selector.SelectorActivity"
+            android:exported="false" />
+        <activity
             android:name=".presentation.AddActivity"
             android:exported="false" />
         <activity
