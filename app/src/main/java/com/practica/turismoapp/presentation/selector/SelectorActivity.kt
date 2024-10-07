@@ -72,10 +72,9 @@ class SelectorActivity : AppCompatActivity() {
         }
         viewModel.fileUploaded.observe(this) {
             lifecycleScope.launch {
-                Toast.makeText(ctx,"Imagen subida en ${it.fileDownloadUri}",Toast.LENGTH_SHORT).show()
-                delay(2_000L)
+                // Esto tiene la url de la imagen
+                // it.fileDownloadUri    ---->   esto es lo que vos tenes que guardar en tu dataclass global para hacer el POST
                 finish()
-                it.fileDownloadUri?.let { url -> writeMessage(ctx, url) }
             }
         }
         viewModel.errorMessage.observe(this) {
