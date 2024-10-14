@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
+import com.practica.turismoapp.Constants.grillaGlamping
 import com.practica.turismoapp.Constants.traspasoDeTurismo
 import com.practica.turismoapp.R
 import com.practica.turismoapp.data.Turismo
@@ -30,13 +31,13 @@ class SecondScreentActivity : AppCompatActivity() {
         binding.reciclerView.setHasFixedSize(true)
         binding.reciclerView.layoutManager = GridLayoutManager(this, 1)
 
-        binding.ivMenu.setOnClickListener {
+        binding.ivProvincias.setOnClickListener {
             intent = Intent(this, AboutActivity::class.java)
             startActivity(intent)
         }
 
-        binding.ivAdd.setOnClickListener {
-            intent = Intent(this, LoginActivity::class.java )
+        binding.ivMenu.setOnClickListener {
+            intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
 
@@ -51,7 +52,8 @@ class SecondScreentActivity : AppCompatActivity() {
     private fun setObserver() {
         homeViewModel.turismoGlam.observe(this) { lista ->
 
-            binding.reciclerView.adapter = lista.let {
+            binding.reciclerView.adapter = lista?.let {
+                grillaGlamping = lista
                 AdapterTurismo(it.Glamping, object : TurismoClickedListener {
                     override fun onTurismoClicked(turismo: Turismo) {
                         traspasoDeTurismo = turismo

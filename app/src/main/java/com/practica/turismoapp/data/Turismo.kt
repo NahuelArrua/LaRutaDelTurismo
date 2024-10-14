@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 
 data class Turismo(
-    var Id: Int = 0,
+    var Id: Int? = 0,
     var Lugares: String = "",
     var Provincia: String = "",
     var Servicios: String = "",
