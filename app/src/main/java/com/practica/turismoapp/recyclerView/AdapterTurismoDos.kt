@@ -14,8 +14,7 @@ import com.practica.turismoapp.data.Turismo
 
 class AdapterTurismoDos(
     private val listaTurismo: List<Turismo>,
-) :
-    RecyclerView.Adapter<AdapterTurismoDos.MyViewHolder>() {
+) : RecyclerView.Adapter<AdapterTurismoDos.MyViewHolder>() {
 
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): MyViewHolder {

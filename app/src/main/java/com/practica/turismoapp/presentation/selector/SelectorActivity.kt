@@ -4,6 +4,7 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.PickVisualMediaRequest
@@ -11,12 +12,9 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.lifecycle.lifecycleScope
+import com.practica.turismoapp.Constants.listaDeImagenes
 import com.practica.turismoapp.R
 import com.practica.turismoapp.databinding.ActivitySelectorBinding
-import com.practica.turismoapp.writeMessage
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 
 class SelectorActivity : AppCompatActivity() {
 
@@ -24,6 +22,7 @@ class SelectorActivity : AppCompatActivity() {
     private var viewModel = SelectorViewModel()
     private val ctx = this
     var imgPath: String? = null
+    var originIndex = 0
 
     val pickMedia = registerForActivityResult(ActivityResultContracts.PickVisualMedia()) { uri ->
         if (uri != null) {
@@ -45,6 +44,8 @@ class SelectorActivity : AppCompatActivity() {
         setupLister()
         setupObservers()
         setupPermission()
+        // Leer de que boton biene
+        originIndex = intent.getIntExtra("posicion", 0 )
     }
 
     private fun setupPermission() {
@@ -70,13 +71,15 @@ class SelectorActivity : AppCompatActivity() {
         viewModel.compartirEnabled.observe(this) {
             binding.btnCompartir.isEnabled = it
         }
-        viewModel.fileUploaded.observe(this) {
-            lifecycleScope.launch {
-                // Esto tiene la url de la imagen
-                // it.fileDownloadUri    ---->   esto es lo que vos tenes que guardar en tu dataclass global para hacer el POST
-                finish()
+
+        viewModel.fileUploaded.observe(this) { archivoSubido ->
+            archivoSubido.fileDownloadUri?.let { archivo ->
+                listaDeImagenes[originIndex] = archivo
             }
+            binding.progressBar.visibility = View.GONE
+            finish()
         }
+
         viewModel.errorMessage.observe(this) {
             if (it) {
                 AlertDialog.Builder(this)
@@ -102,6 +105,7 @@ class SelectorActivity : AppCompatActivity() {
             }
             btnCompartir.setOnClickListener {
                 if (imgPath != null) {
+                    progressBar.visibility = View.VISIBLE
                     viewModel.sendPhoto(imgPath!!, ctx)
                 }
             }

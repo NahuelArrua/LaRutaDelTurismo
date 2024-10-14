@@ -2,11 +2,15 @@ package com.practica.turismoapp.presentation.login
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.util.Log.v
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.practica.turismoapp.Constants
 import com.practica.turismoapp.data.User
 import com.practica.turismoapp.databinding.ActivityLoginBinding
 import com.practica.turismoapp.presentation.selector.SelectorActivity
+import com.practica.turismoapp.presentation.selector.UpLoadActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -20,6 +24,7 @@ class LoginActivity : AppCompatActivity() {
 
         setupObservers()
         setListener()
+        register()
     }
 
     fun setListener() {
@@ -31,16 +36,16 @@ class LoginActivity : AppCompatActivity() {
                 enabled = false
             )
             viewModel.login(user)
-
         }
     }
 
     fun setupObservers() {
 
-        viewModel.user.observeForever {
-            it?.let {
+        viewModel.user.observeForever { usuario ->
+            usuario?.let {
                 if (it.enabled) {
-                    startActivity(Intent(this, SelectorActivity::class.java))
+                    buscarSiTieneGlamping(usuario.place)
+                    startActivity(Intent(this, UpLoadActivity::class.java))
 
                 } else {
                     Toast.makeText(this, "Cuenta Deshabilitada", Toast.LENGTH_SHORT).show()
@@ -53,6 +58,19 @@ class LoginActivity : AppCompatActivity() {
             if (it == true) {
                 Toast.makeText(this, "Error: Cuenta Inexistente", Toast.LENGTH_SHORT).show()
             }
+        }
+    }
+
+    private fun buscarSiTieneGlamping(lugar: String) {
+        Constants.glampingLoad = Constants.grillaGlamping?.Glamping?.find { glamp ->
+            glamp.Lugares.equals(lugar)
+        }
+    }
+
+    fun register(){
+        binding.tvRegistrarse.setOnClickListener {
+            intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
         }
     }
 }
