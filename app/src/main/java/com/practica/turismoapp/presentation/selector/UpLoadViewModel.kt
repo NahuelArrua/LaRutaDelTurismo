@@ -36,6 +36,16 @@ class UpLoadViewModel : ViewModel() {
                         )
                     )
                 }
+
+                is ResultType.Error -> TODO()
+                is ResultType.Success -> TODO()
+                is ResultType.Error -> TODO()
+                is ResultType.Success -> TODO()
+                is ResultType.Error -> TODO()
+                is ResultType.Success -> TODO()
+                is ResultType.Error -> TODO()
+                is ResultType.Success -> TODO()
+                else -> {}
             }
         }
     }

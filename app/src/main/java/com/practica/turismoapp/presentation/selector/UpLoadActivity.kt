@@ -11,7 +11,6 @@ import com.practica.turismoapp.data.Turismo
 import com.practica.turismoapp.data.Foto
 import com.practica.turismoapp.databinding.ActivityUpLoadBinding
 import com.practica.turismoapp.presentation.home.SecondScreentActivity
-import com.practica.turismoapp.data.TurismoGlam as DataTurismoGlam
 
 class UpLoadActivity : AppCompatActivity() {
 
@@ -24,14 +23,12 @@ class UpLoadActivity : AppCompatActivity() {
 
         refrescarListadoDeCarga()
         setupButtonListener()
-      //  setupObserver()
+        setupObserver()
 
     }
 
     fun setupButtonListener(){
 
-        binding.btnLugar.setOnClickListener {
-            startActivity(Intent(this, SelectorActivity::class.java)) }
 
         binding.ivAddImageOne.setOnClickListener {
             startActivity(Intent(this, SelectorActivity::class.java).apply {
@@ -39,35 +36,35 @@ class UpLoadActivity : AppCompatActivity() {
 
         binding.ivAddImageTwo.setOnClickListener {
             startActivity(Intent(this, SelectorActivity::class.java).apply {
-                putExtra("posicion",2) }) }
+                putExtra("posicion",1) }) }
 
         binding.ivAddImageTrhee.setOnClickListener {
             startActivity(Intent(this, SelectorActivity::class.java).apply {
-                putExtra("posicion",3) }) }
+                putExtra("posicion",2) }) }
 
         binding.ivAddImageFor.setOnClickListener {
             startActivity(Intent(this, SelectorActivity::class.java).apply {
-                putExtra("posicion",4) }) }
+                putExtra("posicion",3) }) }
 
         binding.ivAddImageFive.setOnClickListener {
             startActivity(Intent(this, SelectorActivity::class.java).apply {
-                putExtra("posicion",5) }) }
+                putExtra("posicion",4) }) }
 
         binding.ivAddImageSix.setOnClickListener {
             startActivity(Intent(this, SelectorActivity::class.java).apply {
-                putExtra("posicion",6) }) }
+                putExtra("posicion",5) }) }
 
         binding.ivAddImageSeven.setOnClickListener {
             startActivity(Intent(this, SelectorActivity::class.java).apply {
-                putExtra("posicion",7) }) }
+                putExtra("posicion",6) }) }
 
         binding.ivAddImageEight.setOnClickListener {
             startActivity(Intent(this, SelectorActivity::class.java).apply {
-                putExtra("posicion",8) }) }
+                putExtra("posicion",7) }) }
 
         binding.ivAddImageNine.setOnClickListener {
             startActivity(Intent(this, SelectorActivity::class.java).apply {
-                putExtra("posicion",9) }) }
+                putExtra("posicion",8) }) }
 
         binding.btnDataUpload.setOnClickListener {
             // TODO: mandar a la api
@@ -76,18 +73,17 @@ class UpLoadActivity : AppCompatActivity() {
 
         binding.btnDataUpload.setOnClickListener {
             val glampingNuevo = Turismo(
-                Id = 0,
-                Lugares = binding.btnLugar.text.toString(),
-                Provincia = "",
-                Servicios = "",
+                Id = null,
+                Lugares = binding.etPLaces.text.toString(),
+                Provincia = binding.etProvincia.text.toString(),
+                Servicios = binding.etDescriptionTwo.text.toString(),
                 ImagenPrincipal = Constants.listaDeImagenes[0],
-                Descripcion = "",
-                RedesSociales = "",
+                Descripcion = binding.etDescription.text.toString(),
+                RedesSociales = binding.etInstagram.text.toString(),
                 Fotos = listToFoto(Constants.listaDeImagenes.slice(1..8))
             )
             viewModel.upLoad(glampingNuevo)
             Toast.makeText(this,"ok", Toast.LENGTH_SHORT).show()
-
         }
     }
 
@@ -115,14 +111,15 @@ class UpLoadActivity : AppCompatActivity() {
                 if (index == 7) { ivPhotoOcho.load(imagen) }
                 if (index == 8) { ivPhotoNueve.load(imagen) }
             }
-
         }
     }
 
- /*
- *  fun setupObserver(){
+
+
+
+  fun setupObserver(){
         viewModel.upload.observeForever { listaTurismo ->
-            if (listaTurismo){
+            if (listaTurismo!= null){
                 startActivity(Intent(this, SecondScreentActivity::class.java))
             }else{
                 Toast.makeText(this, "Error al intentar publicar", Toast.LENGTH_SHORT).show()
@@ -132,8 +129,6 @@ class UpLoadActivity : AppCompatActivity() {
             Toast.makeText(this, "${error.message} -- ${error.code}", Toast.LENGTH_SHORT).show()
         }
     }
- *
- * */
 
     override fun onPostResume() {
         super.onPostResume()
