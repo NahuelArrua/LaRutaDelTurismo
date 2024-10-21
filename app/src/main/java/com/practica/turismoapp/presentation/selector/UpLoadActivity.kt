@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import coil.load
 import com.practica.turismoapp.Constants
+import com.practica.turismoapp.Constants.glampingLoad
 import com.practica.turismoapp.data.Turismo
 import com.practica.turismoapp.data.Foto
 import com.practica.turismoapp.databinding.ActivityUpLoadBinding
@@ -73,8 +74,8 @@ class UpLoadActivity : AppCompatActivity() {
 
         binding.btnDataUpload.setOnClickListener {
             val glampingNuevo = Turismo(
-                Id = null,
-                Lugares = binding.etPLaces.text.toString(),
+                Id = glampingLoad?.Id,         // Burro, te dije que para modificar le pongas el id encontrado
+                Lugares = glampingLoad?.Lugares ?: Constants.usuarioLogueado?.place ?: "",
                 Provincia = binding.etProvincia.text.toString(),
                 Servicios = binding.etDescriptionTwo.text.toString(),
                 ImagenPrincipal = Constants.listaDeImagenes[0],
@@ -96,12 +97,14 @@ class UpLoadActivity : AppCompatActivity() {
     }
 
     private fun refrescarListadoDeCarga() {
+        Constants.usuarioLogueado?.place.let { binding.etPLaces.setText(it) }
+        glampingLoad?.Provincia.let { binding.etProvincia.setText(it) }
+        glampingLoad?.Descripcion.let { binding.etDescription.setText(it) }
+        glampingLoad?.Servicios.let { binding.etDescriptionTwo.setText(it) }
+
         Constants.listaDeImagenes.forEachIndexed { index, imagen ->
             binding.apply {
-                if (index == 0) {
-                    ivPhotoUno.load(imagen)
-                    Log.d("Nah", "entro en refrescarListadoDeCarga()")
-                }
+                if (index == 0) { ivPhotoUno.load(imagen) }
                 if (index == 1) { ivPhotoDos.load(imagen) }
                 if (index == 2) { ivPhotoTres.load(imagen) }
                 if (index == 3) { ivPhotoCuatro.load(imagen) }

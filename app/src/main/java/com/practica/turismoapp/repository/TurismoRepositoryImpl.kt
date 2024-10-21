@@ -1,6 +1,5 @@
 package com.practica.turismoapp.repository
 
-import com.practica.turismoapp.data.Registro
 import com.practica.turismoapp.data.ResultType
 import com.practica.turismoapp.data.Turismo
 import com.practica.turismoapp.data.User
@@ -43,7 +42,7 @@ class TurismoRepositoryImpl(
         }
     }
 
-    override suspend fun getRegister(user: Registro): ResultType {
+    override suspend fun getRegister(user: User): ResultType {
         val myApy = retrofit.create(APIService::class.java)
         return try {
             val user = myApy.getRegister(user)

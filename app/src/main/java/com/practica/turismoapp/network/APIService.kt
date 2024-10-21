@@ -1,7 +1,5 @@
 package com.practica.turismoapp.network
 
-
-import com.practica.turismoapp.data.Registro
 import com.practica.turismoapp.data.ResponseFileUpload
 import com.practica.turismoapp.data.Turismo
 import com.practica.turismoapp.data.TurismoGlam
@@ -28,5 +26,5 @@ interface APIService {
     suspend fun uploadFile(@Part file: MultipartBody.Part?): ResponseFileUpload
 
     @POST("auth/register")
-    suspend fun getRegister(@Body registro: Registro): Registro
+    suspend fun getRegister(@Body user: User): User
 }

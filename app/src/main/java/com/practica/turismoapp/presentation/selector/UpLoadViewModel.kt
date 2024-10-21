@@ -24,7 +24,9 @@ class UpLoadViewModel : ViewModel() {
 
     fun upLoad(turismoGlam: Turismo){
         viewModelScope.launch {
-            when(val Upload = withContext(Dispatchers.IO){repositoryTurismo.saveGlamping(turismoGlam)}){
+            when(val Upload = withContext(Dispatchers.IO){
+                repositoryTurismo.saveGlamping(turismoGlam)}){
+
                 is ResultType.Success ->{
                     _upLoad.value = Upload.data as Turismo
                 }
@@ -36,16 +38,6 @@ class UpLoadViewModel : ViewModel() {
                         )
                     )
                 }
-
-                is ResultType.Error -> TODO()
-                is ResultType.Success -> TODO()
-                is ResultType.Error -> TODO()
-                is ResultType.Success -> TODO()
-                is ResultType.Error -> TODO()
-                is ResultType.Success -> TODO()
-                is ResultType.Error -> TODO()
-                is ResultType.Success -> TODO()
-                else -> {}
             }
         }
     }

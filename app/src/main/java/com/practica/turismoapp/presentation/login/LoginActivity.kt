@@ -6,7 +6,10 @@ import android.util.Log
 import android.util.Log.v
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import coil.imageLoader
 import com.practica.turismoapp.Constants
+import com.practica.turismoapp.Constants.glampingLoad
+import com.practica.turismoapp.Constants.listaDeImagenes
 import com.practica.turismoapp.data.User
 import com.practica.turismoapp.databinding.ActivityLoginBinding
 import com.practica.turismoapp.presentation.selector.SelectorActivity
@@ -62,8 +65,19 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun buscarSiTieneGlamping(lugar: String) {
-        Constants.glampingLoad = Constants.grillaGlamping?.Glamping?.find { glamp ->
+        glampingLoad = Constants.grillaGlamping?.Glamping?.find { glamp ->
             glamp.Lugares.equals(lugar)
+        }
+        glampingLoad?.let {
+            listaDeImagenes[0] = it.ImagenPrincipal
+            listaDeImagenes[1] = it.Fotos?.get(0)?.ImagenDetalle ?: ""
+            listaDeImagenes[2] = it.Fotos?.get(1)?.ImagenDetalle ?: ""
+            listaDeImagenes[3] = it.Fotos?.get(2)?.ImagenDetalle ?: ""
+            listaDeImagenes[4] = it.Fotos?.get(3)?.ImagenDetalle ?: ""
+            listaDeImagenes[5] = it.Fotos?.get(4)?.ImagenDetalle ?: ""
+            listaDeImagenes[6] = it.Fotos?.get(5)?.ImagenDetalle ?: ""
+            listaDeImagenes[7] = it.Fotos?.get(6)?.ImagenDetalle ?: ""
+            listaDeImagenes[8] = it.Fotos?.get(7)?.ImagenDetalle ?: ""
         }
     }
 
