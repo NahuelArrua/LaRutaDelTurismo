@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 
 data class Turismo(
-    var Id: Int? = 0,
+    var Id: Int = 0,
     var Lugares: String = "",
     var Provincia: String = "",
     var Servicios: String = "",
@@ -13,7 +13,9 @@ data class Turismo(
     var Descripcion: String = "",
     var RedesSociales: String = "",
     var Fotos: List<Foto>? = null
-)
+) {
+    constructor(Id: List<Turismo>, Lugares: String, Provincia: String, Servicios: String, ImagenPrincipal: String, Descripcion: String, RedesSociales: String, Fotos: List<Foto>?) : this()
+}
 
 data class Foto(
     @SerializedName("Imagen")

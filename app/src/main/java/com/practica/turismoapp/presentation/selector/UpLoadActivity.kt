@@ -24,6 +24,7 @@ class UpLoadActivity : AppCompatActivity() {
         refrescarListadoDeCarga()
         setupButtonListener()
         setupObserver()
+       // idEditPlaces()
 
     }
 
@@ -72,20 +73,31 @@ class UpLoadActivity : AppCompatActivity() {
         }
 
         binding.btnDataUpload.setOnClickListener {
-            val glampingNuevo = Turismo(
-                Id = null,
-                Lugares = binding.etPLaces.text.toString(),
-                Provincia = binding.etProvincia.text.toString(),
-                Servicios = binding.etDescriptionTwo.text.toString(),
-                ImagenPrincipal = Constants.listaDeImagenes[0],
-                Descripcion = binding.etDescription.text.toString(),
-                RedesSociales = binding.etInstagram.text.toString(),
-                Fotos = listToFoto(Constants.listaDeImagenes.slice(1..8))
-            )
-            viewModel.upLoad(glampingNuevo)
+            val glampingNuevo = Constants.grillaGlamping?.let { it1 ->
+                Turismo(
+                    Id = it1.Glamping,
+                    Lugares = binding.etPLaces.text.toString(),
+                    Provincia = binding.etProvincia.text.toString(),
+                    Servicios = binding.etDescriptionTwo.text.toString(),
+                    ImagenPrincipal = Constants.listaDeImagenes[0],
+                    Descripcion = binding.etDescription.text.toString(),
+                    RedesSociales = binding.etInstagram.text.toString(),
+                    Fotos = listToFoto(Constants.listaDeImagenes.slice(1..8))
+                )
+            }
+            if (glampingNuevo != null) {
+                viewModel.upLoad(glampingNuevo)
+            }
             Toast.makeText(this,"ok", Toast.LENGTH_SHORT).show()
         }
+
     }
+    private fun buscarId(id: Int) {
+        Constants.glampingLoad = Constants.grillaGlamping?.Glamping?.find { glamp ->
+            glamp.Id?.equals(id) == true
+        }
+    }
+
 
     private fun listToFoto(listArchivos: List<String>): List<Foto>? {
         var listFoto: MutableList<Foto> = mutableListOf()
@@ -94,6 +106,7 @@ class UpLoadActivity : AppCompatActivity() {
         }
         return listFoto
     }
+
 
     private fun refrescarListadoDeCarga() {
         Constants.listaDeImagenes.forEachIndexed { index, imagen ->
@@ -115,11 +128,12 @@ class UpLoadActivity : AppCompatActivity() {
     }
 
 
-
-
   fun setupObserver(){
         viewModel.upload.observeForever { listaTurismo ->
             if (listaTurismo!= null){
+                buscarId(
+
+                    listaTurismo.Id)
                 startActivity(Intent(this, SecondScreentActivity::class.java))
             }else{
                 Toast.makeText(this, "Error al intentar publicar", Toast.LENGTH_SHORT).show()
@@ -134,4 +148,5 @@ class UpLoadActivity : AppCompatActivity() {
         super.onPostResume()
         refrescarListadoDeCarga()
     }
+
 }

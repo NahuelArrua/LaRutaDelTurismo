@@ -1,0 +1,227 @@
+[33mcommit 96576e68421a3997a7ce7bbf24f818ab633b1843[m[33m ([m[1;36mHEAD -> [m[1;32mdevelop[m[33m, [m[1;31morigin/develop[m[33m)[m
+Author: Arrua Nahuel <nahuelarrua580@gmail.com>
+Date:   Thu Oct 17 00:29:30 2024 -0300
+
+    commit 14/10
+
+[33mcommit 0d5a9a85bfee75324e776d9af34b5c7f59b909d3[m
+Author: Arrua Nahuel <nahuelarrua580@gmail.com>
+Date:   Mon Oct 14 15:43:08 2024 -0300
+
+    commit 14/10
+
+[33mcommit fdbec809cca48dfeefa675d55b9f331dfb7756f8[m
+Author: Sebastian <spratto@teco.com.ar>
+Date:   Mon Oct 7 13:19:40 2024 -0300
+
+    aca tenemos el url de la imagen
+
+[33mcommit b5e681c738490f6951b084bbecf4607e9ad08434[m
+Author: Sebastian <spratto@teco.com.ar>
+Date:   Thu Sep 26 17:28:22 2024 -0300
+
+    request permission write file to storage
+
+[33mcommit 4f5b4f3dbdc0a97edb3aa789c3658eaa5ea9a784[m
+Author: Sebastian <spratto@teco.com.ar>
+Date:   Thu Sep 26 14:18:29 2024 -0300
+
+    subiendo imagen al servidor
+
+[33mcommit 7b357407a6d04425e6c1e51f9a7624f9c3317807[m
+Author: Arrua Nahuel <nahuelarrua580@gmail.com>
+Date:   Thu Sep 26 08:47:26 2024 -0300
+
+    commit 26/09
+
+[33mcommit 12722e3f37c40fa497c51fadf2b81be136354d66[m[33m ([m[1;31morigin/feature/001-nuevas-funciones-propuestas[m[33m)[m
+Author: Sebastian <spratto@teco.com.ar>
+Date:   Thu Sep 19 17:28:48 2024 -0300
+
+    fix en splash
+
+[33mcommit 52351b17456443a7c964d39c22d4073c7d65eda2[m
+Author: Sebastian <spratto@teco.com.ar>
+Date:   Thu Sep 19 12:22:17 2024 -0300
+
+    se implementa login para subir imagenes
+
+[33mcommit fc98742802db0f48ed72b285b09fac98fbf84881[m[33m ([m[1;32mfeature/001-nuevas-funciones-propuestas[m[33m)[m
+Author: Arrua Nahuel <nahuelarrua580@gmail.com>
+Date:   Thu Sep 19 11:28:46 2024 -0300
+
+    commit 19/09
+
+[33mcommit a5f1da85de3dddc22ac7d8dd85630fe184c30503[m
+Author: Arrua Nahuel <nahuelarrua580@gmail.com>
+Date:   Sun Sep 15 18:36:22 2024 -0300
+
+    fix acerca de, home imagen, apunta a preprod
+
+[33mcommit a6a2554ab0becd8dd9ea640961750f2354e9628e[m
+Author: Arrua Nahuel <nahuelarrua580@gmail.com>
+Date:   Sat Sep 14 21:16:05 2024 -0300
+
+    Se agregaron mas imagenes a la lista.
+
+[33mcommit 50c936a3306830643af8c3f27f5b72fcdaf18306[m
+Author: Arrua Nahuel <nahuelarrua580@gmail.com>
+Date:   Sat Sep 14 14:34:35 2024 -0300
+
+    Se agregaron mas imagenes a la lista.
+
+[33mcommit 9dfcbb9b9162844d3c7258c555348c469ae5a632[m
+Author: Sebastian <spratto@teco.com.ar>
+Date:   Fri Sep 6 17:11:37 2024 -0300
+
+    bump up version
+
+[33mcommit 94c4a89aad7403a44e576787579fadf58feb58bb[m
+Author: Arrua Nahuel <nahuelarrua580@gmail.com>
+Date:   Thu Aug 29 20:55:39 2024 -0300
+
+    Cambios en el Splsh, titulo, y paddin button en el recycler view.
+
+[33mcommit 6c31ca429b8701f378c782c8f3983022203b3d7e[m
+Author: Sebastian <spratto@teco.com.ar>
+Date:   Mon Aug 26 17:45:12 2024 -0300
+
+    agregando gradient en la lista del home
+
+[33mcommit 374e60056aeccdd55e2f0358b8e222aa920bef40[m
+Author: Sebastian <spratto@teco.com.ar>
+Date:   Mon Aug 26 17:44:58 2024 -0300
+
+    cambio de configuracion en el gradient
+
+[33mcommit 33fb19b4224d39baf9d9698bf955d23de00c79cb[m
+Author: Sebastian <spratto@teco.com.ar>
+Date:   Mon Aug 26 17:33:28 2024 -0300
+
+    mesnsajes y capturas de errores de la api
+
+[33mcommit cd57138d269cac9fe01c35e2f6ae7eeb1e08be6b[m
+Author: Sebastian <spratto@teco.com.ar>
+Date:   Mon Aug 26 17:33:06 2024 -0300
+
+    algunas cadenas de texto
+
+[33mcommit 09d48e1e4ae505ea54682d273b0d52c086b573a4[m
+Author: Sebastian <spratto@teco.com.ar>
+Date:   Mon Aug 26 17:32:55 2024 -0300
+
+    aplicamos un tipo de datos para capturar errores
+
+[33mcommit f130b836df2d363a28151c5be6ef7f6a48fad8fd[m
+Author: Sebastian <spratto@teco.com.ar>
+Date:   Mon Aug 26 17:32:09 2024 -0300
+
+    nuevo item del recycler de la home
+
+[33mcommit 6795994f1babcb86d8f5940cbb0662225e148641[m
+Author: Sebastian <spratto@teco.com.ar>
+Date:   Mon Aug 26 17:31:40 2024 -0300
+
+    un mock y se cambia la recepcion del tipo de datos de la api
+
+[33mcommit 99dda3055a7c9f7de8103201d61aebb891583aa4[m
+Author: Sebastian <spratto@teco.com.ar>
+Date:   Mon Aug 26 17:31:14 2024 -0300
+
+    un  gradient para utilizar luego
+
+[33mcommit 54b2e91ed32d41b59ca42ec84891e5f848e71b0f[m
+Author: Sebastian <spratto@teco.com.ar>
+Date:   Mon Aug 26 17:31:00 2024 -0300
+
+    algo de descripcion
+
+[33mcommit 18c2e1357bdbe8c9db645d275435e8e208f5fcd0[m
+Author: Sebastian <spratto@teco.com.ar>
+Date:   Mon Aug 26 17:30:35 2024 -0300
+
+    remplazo del tipo de datos que devuelve la api
+
+[33mcommit 9ec57910b0dfb0325b660957f3b8408db734a4f7[m
+Author: Sebastian <spratto@teco.com.ar>
+Date:   Mon Aug 26 17:30:06 2024 -0300
+
+    creamos un item nuevo para experimentar
+
+[33mcommit 9703280aa9fed962d03804ff19ffe7f77a88d760[m
+Author: Sebastian <spratto@teco.com.ar>
+Date:   Mon Aug 26 17:29:43 2024 -0300
+
+    tomamos la provincia de la api y la ponemos bajo la imagen
+
+[33mcommit 5e73da10eea66c01d8471141c00c84e5b0848c6c[m
+Author: Sebastian <spratto@teco.com.ar>
+Date:   Mon Aug 26 17:29:13 2024 -0300
+
+    se agrega la marca y eslogan
+
+[33mcommit 2d6cd6c0d48804e9fabeed897d7e83660692a6bd[m
+Author: Sebastian <spratto@teco.com.ar>
+Date:   Fri Aug 9 19:36:48 2024 -0300
+
+    nuevo splash
+
+[33mcommit 450d29d9d186e9aab8f98b0daca79338f35f48e2[m
+Author: Arrua Nahuel <nahuelarrua580@gmail.com>
+Date:   Fri Aug 9 19:31:33 2024 -0300
+
+    Se agregaron mas imagenes a la lista.
+
+[33mcommit 8131a55a490884f07fa65168817047362e4860fa[m
+Author: NahuelArrua <nahuelfranciscoarrua@hotmail.com>
+Date:   Fri Jul 19 18:38:51 2024 -0300
+
+    Agregamos las urls de insttagram.
+
+[33mcommit bd7523f70169151217fb9e2a9bb2375370170a1c[m[33m ([m[1;31morigin/develop-in-to-uat-18072024[m[33m)[m
+Author: NahuelArrua <nahuelfranciscoarrua@hotmail.com>
+Date:   Thu Jul 18 20:07:43 2024 -0300
+
+    Primer lanzamiento de la aplicacion.
+
+[33mcommit 1e8198c1bce7983ce06b904da7d8265fac5b2e79[m[33m ([m[1;31morigin/nahuel[m[33m)[m
+Author: Sebastian <spratto@teco.com.ar>
+Date:   Wed Jul 10 20:08:08 2024 -0300
+
+    nuevas modificaciones en la lista
+
+[33mcommit 6b4f14613989a2a6625e91b76fbe5645d60d5b59[m
+Author: Sebastian <spratto@teco.com.ar>
+Date:   Fri Jul 5 20:16:05 2024 -0300
+
+    modificaciones con view model y livedata
+
+[33mcommit dcec254e2963df9c094db689ae1aeabcf58d4723[m
+Author: sebapratto <pratto.sebastian.ignacio@gmail.com>
+Date:   Fri Jul 5 12:33:57 2024 -0300
+
+    arreglar desde aca, tiene json nuevo de fotos
+
+[33mcommit 637e6937fd1cf98cf2857e90de481bb3ad205468[m[33m ([m[1;31morigin/Nahuel[m[33m)[m
+Author: NahuelArrua <nahuelfranciscoarrua@hotmail.com>
+Date:   Fri Jul 5 10:30:17 2024 -0300
+
+    commit 05/07/2024
+
+[33mcommit a1381366bfdd28789d96f8206b949c5eb2a6f6b1[m
+Author: NahuelArrua <nahuelfranciscoarrua@hotmail.com>
+Date:   Fri Jul 5 10:30:05 2024 -0300
+
+    Primer Commit
+
+[33mcommit f366e01dccd60be20a2dfe8718da038072812511[m
+Author: NahuelArrua <nahuelfranciscoarrua@hotmail.com>
+Date:   Sun Jun 30 14:17:39 2024 -0300
+
+    Primer Commit
+
+[33mcommit f3006c6c20372ae7ef93c91d13b1214320e0c273[m
+Author: NahuelArrua <nahuelfranciscoarrua@hotmail.com>
+Date:   Mon Jun 17 17:37:37 2024 -0300
+
+    Primer Commit
