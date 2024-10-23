@@ -75,7 +75,7 @@ class UpLoadActivity : AppCompatActivity() {
         binding.btnDataUpload.setOnClickListener {
             val glampingNuevo = Turismo(
                 Id = glampingLoad?.Id,         // Burro, te dije que para modificar le pongas el id encontrado
-                Lugares = binding.etPLaces.text.toString(),
+                Lugares = glampingLoad?.Lugares ?: Constants.usuarioLogueado?.place ?: "",
                 Provincia = binding.etProvincia.text.toString(),
                 Servicios = binding.etDescriptionTwo.text.toString(),
                 ImagenPrincipal = Constants.listaDeImagenes[0],
@@ -97,9 +97,12 @@ class UpLoadActivity : AppCompatActivity() {
     }
 
     private fun refrescarListadoDeCarga() {
+        Constants.usuarioLogueado?.place.let { binding.etPLaces.setText(it) }
+        glampingLoad?.Provincia.let { binding.etProvincia.setText(it) }
+        glampingLoad?.Descripcion.let { binding.etDescription.setText(it) }
+
         Constants.listaDeImagenes.forEachIndexed { index, imagen ->
             binding.apply {
-                etPLaces.setText(glampingLoad?.Lugares)
                 if (index == 0) { ivPhotoUno.load(imagen) }
                 if (index == 1) { ivPhotoDos.load(imagen) }
                 if (index == 2) { ivPhotoTres.load(imagen) }

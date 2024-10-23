@@ -3,12 +3,7 @@ package com.practica.turismoapp.presentation.login
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.practica.turismoapp.R
-import com.practica.turismoapp.data.Registro
 import com.practica.turismoapp.data.User
 import com.practica.turismoapp.databinding.ActivityRegisterBinding
 import com.practica.turismoapp.presentation.home.SecondScreentActivity
@@ -28,7 +23,7 @@ class RegisterActivity : AppCompatActivity() {
 
     fun setListener() {
         binding.btnRegister.setOnClickListener {
-            val Registro = Registro(
+            val user = User(
                 user = binding.etUsuario.text.toString(),
                 password = binding.etPassword.text.toString(),
                 place = binding.etPlace.text.toString(),
@@ -36,7 +31,7 @@ class RegisterActivity : AppCompatActivity() {
                 email = binding.etEmail.text.toString(),
                 enabled = true
             )
-            viewModel.register(Registro)
+            viewModel.register(user)
         }
     }
 
