@@ -4,13 +4,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import coil.imageLoader
 import com.practica.turismoapp.Constants
 import com.practica.turismoapp.Constants.glampingLoad
 import com.practica.turismoapp.Constants.listaDeImagenes
 import com.practica.turismoapp.data.User
 import com.practica.turismoapp.databinding.ActivityLoginBinding
-import com.practica.turismoapp.presentation.selector.SelectorActivity
 import com.practica.turismoapp.presentation.selector.UpLoadActivity
 
 class LoginActivity : AppCompatActivity() {

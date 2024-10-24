@@ -2,14 +2,13 @@ package com.practica.turismoapp.presentation.selector
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import coil.load
 import com.practica.turismoapp.Constants
 import com.practica.turismoapp.Constants.glampingLoad
-import com.practica.turismoapp.data.Turismo
 import com.practica.turismoapp.data.Foto
+import com.practica.turismoapp.data.Turismo
 import com.practica.turismoapp.databinding.ActivityUpLoadBinding
 import com.practica.turismoapp.presentation.home.SecondScreentActivity
 
