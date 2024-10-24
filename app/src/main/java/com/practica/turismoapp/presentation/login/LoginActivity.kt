@@ -2,8 +2,6 @@ package com.practica.turismoapp.presentation.login
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import android.util.Log.v
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import coil.imageLoader
